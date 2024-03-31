@@ -1,0 +1,29 @@
+question 1) First we will deal with the notion of demographic parity. The data clearly shows that you are more likely to
+make more than 50K if you are Male and that P(>50K|Male) > P(>50K|Female). However, because this is a Naive Bayes Net
+all this tells us is that a higher proportion of men in the database make more than >50k, it doesn't tell us why they
+do.
+
+Secondly we will deal with separation. Given the core evidence E1 women are more likely to make less than 50K then
+given E2. Which indicates that adding gender to the evidence set changes the prediction. Which indicates a lack of
+separation. However, I would argue this is a side effect of using a Naive Bayes Net. Because we are not accounting for
+the affect that being a woman has on the other variables. For example, if we were to add the factor P(Education|Gender)
+to the Net we might find out that the only casual affect Women have on income is through education. In which case we
+could find the data to be seperated. Indeed, any time you use a Naive Bayes Net and there is no demographic parity you
+end up with seperation. This is because the Naive Bayes Net is a model that assumes independence between variables. As
+evidence to this possibly being true we find that given E1 (which does not contain gender in the evidence set) men are
+more likely to make >50k.
+
+Thirdly we will deal with sufficiency. Given the core evidence E1 we find that women are in reality more likely to make
+less than men despite E1 giving them equally likely predictions. This seems to indicate that the core evidence E1 is not
+enough to explain the difference between men and woman. The most likely explanation for this is that woman are more
+likely to make less then men regardless of external factors. However, this is not the only explanation. It could be that
+there is a factor that we are not accounting for that is causing this difference.
+
+question 2) I would never use this model to decide on hiring practices. This is because the amount of money I want to
+pay to someone has nothing to do with how much they statistically make. The only statistic that I care about is how
+skilled a person is. This is because I want to pay people based on how much value they bring to the company. While you
+could argue that the pay is supposed to be competitive, and you should only pay someone what they could possibly make
+elsewhere. I would argue that this is a bad way to run a company. Additionally, you might argue that the main reason
+why people make the amount of money they do is because of their skill level. However, I would argue that this is not
+indicated by the data. For example, if you look at the data you will find that Race, Gender, and Country all have a
+large impact on how much money you make. However, none of these things have anything to do with how skilled you are.
